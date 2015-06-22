@@ -43,6 +43,7 @@ date : 2014-08-10
   * 代码描述
 
       {% blockquote %}
+      
       worker_processes 1;
       error_log logs/error.log debug;
       events {
