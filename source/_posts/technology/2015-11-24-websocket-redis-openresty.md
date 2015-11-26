@@ -101,50 +101,55 @@ date : 2015-11-24
 
 ---------------
   
-  {% blockquote %}
+{% blockquote  %}
+  var ws = null;
+  function connect() {
+    if (ws !== null) return log('already connected');
+    ws = new WebSocket('ws://192.168.0.50/webws?channel="zhang"');
+    ws.onopen = function () {
+      log('connected');
+    };
+    ws.onerror = function (error) {
+      log(error);
+    };
+    ws.onmessage = function (e) {
+      log('recv: ' + e.data);
+    };
+    ws.onclose = function () {
+      log('disconnected');
+      ws = null;
+    };
+    return false;
+  }
+  function disconnect() {
+    if (ws === null) return log('already disconnected');
+    ws.close();
+    return false;
+  }
+  function send() {
+    if (ws === null) return log('please connect first');
+    var text = document.getElementById('text').value;
+    document.getElementById('text').value = "";
+    log('send: ' + text);
+    ws.send(text);
+    return false;
+  }
+  function log(text) {
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(text));
+    document.getElementById('log').appendChild(li);
+    return false;
+  }    
+{% endblockquote  %}
 
-      var ws = null;
-      function connect() {
-        if (ws !== null) return log('already connected');
-        ws = new WebSocket('ws://192.168.0.50/webws?channel="zhang"');
-        ws.onopen = function () {
-          log('connected');
-        };
-        ws.onerror = function (error) {
-          log(error);
-        };
-        ws.onmessage = function (e) {
-          log('recv: ' + e.data);
-        };
-        ws.onclose = function () {
-          log('disconnected');
-          ws = null;
-        };
-        return false;
-      }
-      function disconnect() {
-        if (ws === null) return log('already disconnected');
-        ws.close();
-        return false;
-      }
-      function send() {
-        if (ws === null) return log('please connect first');
-        var text = document.getElementById('text').value;
-        document.getElementById('text').value = "";
-        log('send: ' + text);
-        ws.send(text);
-        return false;
-      }
-      function log(text) {
-        var li = document.createElement('li');
-        li.appendChild(document.createTextNode(text));
-        document.getElementById('log').appendChild(li);
-        return false;
-      }
-     
-  {% endblockquote %}
+> 压力测试
 
->一些问题
+--------------
+
+    {% img '/hello.png' %}
+
+
+> 一些问题
 
 -----------------
   
