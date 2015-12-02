@@ -145,8 +145,10 @@ date : 2015-11-24
 > 压力测试
 
 --------------
+  * [thor](https://github.com/observing/thor) 是WebSocket压测工具
+  * thor --amount 3000 ws://192.168.0.50/webws?channel='zxh'
 
-    {% img '/hello.png' %}
+    {% img '/websocket.png' %}
 
 
 > 一些问题
