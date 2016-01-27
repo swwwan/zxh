@@ -15,14 +15,14 @@ date : 2015-06-21 13:44:20
 1. 打开 [JMeter](http://jmeter.apache.org/)
 
 2. 在 WorkBench 中，建立一个 HTTP(S) Test Script Recorder
-
+    {% img '/loadtest1.png' %}
 3. 在 Test plan content > Grouping 中，选择 Put each group in a new controller
- 
+    {% img '/loadtest1.png' %}
 4. 点击 Start 按钮，这样会启动一个用于录制脚本的代理服务器，默认端口是 8080
 
 5. 打开 Chrome Developer tools，打开准备测试的页面
 
-6. 在 [Proxy SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega) 中选择 JMeter 的代理服务器
+6. 在 [Proxy SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega) 中选择 JMeter 的代理服务器,测试本地请确定去除本地代理
 
 7. 清空缓存并重新加载页面
   
@@ -48,8 +48,8 @@ date : 2015-06-21 13:44:20
 
 我们主要关注
 
-* Graph Results
-* Summary Report
+* Graph Results 图形报告
+* Summary Report 聚合报告
 
 ##执行测试
 -------------
