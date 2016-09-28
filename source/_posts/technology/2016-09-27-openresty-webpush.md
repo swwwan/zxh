@@ -64,3 +64,12 @@ ngx.say(json.encode(ret))
   - 未断开连接会在90s后失效。
   - 该问题暂时未想通如何解决。
 
+## 注意
+
+* redis.set_timeout 设置的客户端超时时间要长，不然brpop设置服务器超时时间大于客户端的，会在客户端超时时结束连接。[](https://groups.google.com/forum/#!topic/openresty/HP74ZfLZ6zA)
+
+## 参考
+
+* [redis.set_timeout会导致后来的blpop失效？](https://groups.google.com/forum/#!topic/openresty/HP74ZfLZ6zA)
+* [http如何像tcp一样实时的收消息？](http://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959605&idx=1&sn=21f25087bef3c3a966ef03b824365621&mpshare=1&scene=1&srcid=0926GHRm3xAgIFrWRUEq6s0y#rd)
+* [nil、null与ngx.null](http://www.pureage.info/2013/09/02/125.html)
