@@ -74,7 +74,7 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:swwwan/zxh.git
+  repo: git@github.com:zhangxinhang/zxh.git
 
 # Theme
 
@@ -93,7 +93,7 @@ jiathis:
 
 # 社交链接，将在侧栏中显示
 social:
-  GitHub: https://github.com/swwwan/
+  GitHub: https://github.com/zhangxinhang/
   Weibo: http://weibo.com/504266561/
   DouBan: http://www.douban.com/people/67802092/
   ZhiHu: http://www.zhihu.com/people/zhang-xin-hang/
