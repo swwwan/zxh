@@ -16,7 +16,7 @@ swiftype_key: _k4qKF_XFi5N9gDNVXGq
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://zxh.sx.cn
+url: http://zhxh.online
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
