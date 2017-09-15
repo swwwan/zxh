@@ -28,7 +28,7 @@ date : 2015-11-24
 
 -----------------
 
-  {% blockquote %}
+  ```
 
     local redis = require "resty.redis"
     local cjson = require "cjson"
@@ -95,13 +95,13 @@ date : 2015-11-24
     end
     wb:send_close()
 
-  {% endblockquote %}
+  ```
 
 > html测试代码
 
 ---------------
   
-{% blockquote  %}
+```
   var ws = null;
   function connect() {
     if (ws !== null) return log('already connected');
@@ -140,7 +140,7 @@ date : 2015-11-24
     document.getElementById('log').appendChild(li);
     return false;
   }    
-{% endblockquote  %}
+```
 
 > 压力测试
 

@@ -16,7 +16,7 @@ date : 2016-09-27 15:54:20
 <!--more-->
 ## openresty lua 脚本
 --------------
-{% blockquote %}
+```
 
 local json = require("cjson")
 local bcpUtil= require("vis.visUtil")
@@ -31,11 +31,11 @@ end
 bcpUtil.close(instance)
 ngx.say(json.encode(ret))
 
-{% endblockquote %}
+```
 
 ## 前端html 
 ---------------
-{% blockquote %}
+```
 
  function push() {
     $.getJSON("http://192.168.0.53/webpush",{key:JSON.stringify("zhang")}).done(function(ret) {
@@ -51,7 +51,7 @@ ngx.say(json.encode(ret))
     push()
   });
 
-{% endblockquote %}
+```
 
 ## 测试
 ------------------

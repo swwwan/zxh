@@ -42,7 +42,7 @@ date : 2014-08-10
 
   * 代码描述
 
-      {% blockquote %}
+      ```
       
       worker_processes 1;
       error_log logs/error.log debug;
@@ -77,13 +77,13 @@ date : 2014-08-10
         }
       }
 
-      {% endblockquote %}
+      ```
 
 4. conf/test.lua
 
   * 代码描述
 
-      {% blockquote %}
+      ```
 
         local json = require("cjson")
         local parser = require("redis.parser")
@@ -103,13 +103,13 @@ date : 2014-08-10
         end
         ngx.say(json.encode(tab))
 
-      {% endblockquote %}
+      ```
 
 5. 测试
 
   * 详细描述
 
-      {% blockquote %}
+      ```
 
         http://192.168.0.36/get?key=foo
 
@@ -119,4 +119,4 @@ date : 2014-08-10
 
         return:{"foo":"bar","songsong":"songsong"}
 
-      {% endblockquote %}
+      ```
