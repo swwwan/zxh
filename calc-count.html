@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, 
+minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+</head>
+
+<html>
+	<script>
+	function calcCount(){
+		var sum = document.getElementById('sum1').value;
+		var a =  document.getElementById('num1').value;
+		var b =  document.getElementById('num2').value;
+		var resultStr = "总数："+sum+" , A:"+a+" B:"+b+"<br>";
+		for (var i = 1; i < sum / a; i++) {
+			var x = sum - (a * i);
+			if (x % b == 0) {
+				resultStr+="A=" + i + ", B=" + x / b+"<br>";
+			}
+		}
+		document.getElementById("result").innerHTML=resultStr;
+	}
+	</script>
+<body>
+
+
+<form>
+<label for="fname">总数:</label><br>
+<input type="number" id="sum1" name="fname"><br>
+<label for="fname">数字A:</label><br>
+<input type="number" id="num1" name="fname" value="130"><br>
+<label for="lname">数字B:</label><br>
+<input type="number" id="num2" name="lname" value="68"><br><br>
+<input type="button" onclick="calcCount()" value="计算">
+</form>
+<div id="result"></div>
+
+
+</body>
+</html>
+
